@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <style>
+      *{
+            margin: 0;
+            padding: 0;
+        }
+       table, th, td {
+            padding: 20px;
+            font-size: 13px;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        thead {
+          background-color: rgb(211, 206, 206);
+        }
+         ul li {
+            padding-bottom: 10px;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <script>
+      var rootElement = document.createElement("div");
+      rootElement.style.backgroundColor = "black";
+      rootElement.style.width = "100%";
+      rootElement.style.height = "100%";
+      rootElement.style.display = "flex";
+      rootElement.style.justifyContent = "center";
+
+      var card_container = document.createElement("div");
+      card_container.style.width = "50%";
+      card_container.style.height = "800px";
+      card_container.style.backgroundColor = "white";
+      card_container.style.border = "5px solid white";
+      card_container.style.padding = "10px";
+      card_container.style.margin = "40px";
+      card_container.style. fontFamily = " Arial, Helvetica, sans-serif";
+   
+      var card_header = document.createElement("div");
+      card_header.style.display = "flex";
+      card_header.style.justifyContent = "space-between";
+      card_header.style.marginTop = "40px";
+      card_header.style.paddingLeft = "40px";
+      card_header.style.paddingRight = "40px";
+
+      var card_header_span = document.createElement("span");
+      var card_header_span_b = document.createElement("b");
+      card_header_span_b.innerHTML = "RAJITHA P";
+
+      var card_header_mail = document.createElement("div");
+      card_header_mail.style.display = "flex";
+      card_header_mail.style.gap = "4px";
+
+      var card_header_mail_span = document.createElement("span");
+      card_header_mail_span.innerHTML = "Email:";
+      var card_header_mailId_span = document.createElement("span");
+      card_header_mailId_span.innerHTML = "rajitha.pxxxxxx@gmail.com";
+      card_header_mailId_span.style.color = "blue";
+      card_header_mailId_span.style.textDecoration = "underline";
+
+      var break_div = document.createElement("div");
+      break_div.style.borderTop = "2px solid black";
+      break_div.style.marginTop = "20px";
+      break_div.style.marginLeft = "15px";
+      break_div.style.marginRight = "20px";
+      break_div.style.height = "1px";
+
+      var objective_container = document.createElement("div");
+      objective_container.style.margin = "30px";
+      objective_container.style.marginTop = "30px";
+      objective_container.style.marginLeft = "30px";
+      objective_container.style.marginRight = "30px";
+      
+      var objective_container_head = document.createElement("div");
+      objective_container_head.style.textDecoration = "underLine";
+      objective_container_head.style.backgroundColor = "lightGrey";
+      objective_container_head.style.fontSize = "13px";
+
+      var objective_container_head_span = document.createElement("span");
+      var objective_container_head_span_b = document.createElement("b");
+      objective_container_head_span_b.innerText = "CAREER OBJECTIVE :";
+
+      var objective_container_text = document.createElement("div");
+      objective_container_text.style.marginTop = "20px";
+      objective_container_text.style.marginLeft = "40px";
+      objective_container_text.style.marginRight = "40px";
+      objective_container_text.style.fontSize = "13px";
+
+      var objective_container_text_p = document.createElement("p");
+      objective_container_text_p.innerText = "Seeking Full-time position as a Software Developer leveraging my logical reasoning skills using new and improved technological tools and techniques for the development of the organization.";
+
+      var academic_container =  document.createElement("div");
+      academic_container.style.marginTop = "20px";
+      academic_container.style.marginLeft = "30px";
+      academic_container.style.marginRight= "30px";
+
+      var academic_container_head = document.createElement("div");
+      academic_container_head.style.textDecoration = "underline";
+      academic_container_head.style.backgroundColor = "lightGrey";
+      academic_container_head.style.fontSize = "13px";
+
+      var academic_container_head_span = document.createElement("span");
+      var academic_container_head_span_b = document.createElement("b");
+      academic_container_head_span_b.innerText = "ACADEMIC QUALIFICATIONS :";
+
+      var academic_container_tab = document.createElement("div");
+      academic_container_tab.style.margin = "40px";
+      academic_container_tab.style.fontSize = "12px";
+      
+      var Qualification = ["MTECH","BTECH","INTER","SSC"];
+      var University = ["JNTUH","JNTUH","S.R.COLLEGE","V.V.V.HIGH SCHOOL"];
+      var YearOfPass = ["2016","2014","2010","2008"];
+      var Percentage = ["79.0","78.0","89.1","88.8"];
+      var table = "<table><thead><tr><th>Qualification</th><th>Board/University</th><th>Year of pass</th><th>Percentage</th></tr></thead><tbody>";
+        for(var i=0;i<Qualification.length;i++){
+          table += "<tr><td>"+Qualification[i]+"</td><td>"+University[i]+"</td><td>"+YearOfPass[i]+"</td><td>"+Percentage[i]+"</td></tr>";
+
+        }
+        table += "</tbody></table>";
+        academic_container_tab.innerHTML = table;
+
+      var skiill_container = document.createElement("div");
+      skiill_container.style.marginLeft = "30px";
+      skiill_container.style.marginRight = "30px";
+
+      var skiill_container_head = document.createElement("div");
+      skiill_container_head.style.textDecoration = "underLIne";
+      skiill_container_head.style.backgroundColor = "lightGrey";
+      skiill_container_head.style.fontSize = "13px";
+
+      var skiill_container_head_span = document.createElement("span");
+      var skiill_container_head_span_b = document.createElement("b");
+      skiill_container_head_span_b.innerText = "SKILL SET :";
+
+      var skiill_container_details = document.createElement("div");
+      skiill_container_details.style.marginTop = "20px";
+      skiill_container_details.style.marginLeft = "40px";
+      skiill_container_details.style.marginRight = "40px";
+      skiill_container_details.style.fontSize = "13px";
+
+        var headings = ["Languages :","Web Technologies :","Data bases :","Version Control :"];
+        var text= ["C,C++,Core Java.","HTML,CSS,JavaScript.","MySql,MongoDB.","Git."];
+        var styles = ['"padding-right:55px;"','"padding-right: 10px;"','"padding-right: 55px;"','"padding-right: 25px;"'];
+        
+      var ul ="<ul>";
+      for(var i= 0;i<4;i++){
+        ul += "<li><span><b" + " style = " + styles[i]+ ">" +headings[i]+ "</b>" +text[i]+ "</span></li>";
+      }
+      ul += "</ul>";
+      skiill_container_details.innerHTML = ul;
+
+
+      document.body.appendChild(rootElement);
+      rootElement.appendChild(card_container);
+      card_container.appendChild(card_header);
+      card_header.appendChild(card_header_span);
+      card_header_span.append(card_header_span_b);
+      card_header.appendChild(card_header_mail);
+      card_header_mail.appendChild(card_header_mail_span);
+      card_header_mail.appendChild(card_header_mailId_span);
+      card_container.appendChild(break_div);
+      card_container.appendChild(objective_container);
+      objective_container.appendChild(objective_container_head);
+      objective_container_head.appendChild(objective_container_head_span);
+      objective_container_head_span.appendChild(objective_container_head_span_b);
+      objective_container.appendChild(objective_container_text);
+      objective_container_text.appendChild(objective_container_text_p);
+      card_container.appendChild(academic_container);
+      academic_container.appendChild(academic_container_head);
+      academic_container_head.appendChild(academic_container_head_span);
+      academic_container_head_span.appendChild(academic_container_head_span_b);
+      academic_container.appendChild(academic_container_tab);
+      card_container.appendChild(skiill_container);
+      skiill_container.appendChild(skiill_container_head);
+      skiill_container_head.appendChild(skiill_container_head_span);
+      skiill_container_head_span.appendChild(skiill_container_head_span_b);
+      skiill_container.appendChild(skiill_container_details);
+      
+     
+    </script>
+    
+</body>
+</html>
